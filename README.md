@@ -1,42 +1,43 @@
-# OpenCDU
-A general purpose Control Display Unit (like found in airliner and jet fighter cockpits) written in JavaScript for electron
+# OpenMFD
+OpenMFD is a fully-functional Multi-Function Display which can be used independently or as the screen for human interface devices like the Thrustmaster Cougar MFDs. It is intended for users to easily create new profiles through use of a declarative JSON definition for profiles, pages, and button functionality. It is cross-platform by virtue of relying on NodeJS's Electron framework for desktop applications. It was originally a fork of the OpenCDU project. 
 
-## What does it do?
-Right now, for you, probably nothing. However, it's a good framework to use as a starting point if you're looking to build a general purpose user interface for something, especially if you want it to have an aviation/space/military look-and-feel. See "What is a CDU?" for more information about it's uses. Adding buttons and pages to the interface is as easy as editing a webpage, and the JSON message format is very simple to use. It shouldn't be much work to integrate this with any other code that has library support for TCP and JSON.
-
-## How to run with npm (the node.js package manager)
-This requires node/npm to be installed.
-
-To install the required JavaScript dependencies, navigate in a shell to the directory where you cloned the code and run:
+## Installation
+Install the NodeJS and NPM (Node Package Manager) appropriate for your operating system. 
+Download the source via git or ZIP file. Navigate to that directory and run the commands: 
     npm install
 
-Then to run the program you can use:
+## Running the application
     npm start
 
-## What is a CDU?
-A CDU is basically a small Multi Function Display (MFD) along with an alphanumeric keypad. It generally also has some other buttons (which will vary from aircraft to aircraft) to call up specific data quickly. The MFD is used to show various pages and menus which can be navigated using the buttons on either side of the screen. 
+You can run as many instances of the MFD as you want (I run at least two).
 
-The CDU is usually used for things such as:
-- Entering and managing waypoints
-- Monitoring and configuring aircraft sub-systems
-- Retrieving weather and NOTAM information
-- Troubleshooting issues in flight
- 
-I started working on this project intending to use it as the primary interface to the autopilot I'm writing for Kerbal Space Program using the Kerbal Remote Procedure Calls mod (kRPC). That is still the plan, but for a long time it will probably be general enough that others could find it usefull, even if only as a starting point to modify it to their own ends.
+## Editing profiles
+### Sample profile
+The sample profile profiles/tie_fighter.json is provided as a starting point. 
 
-## Implementation Details
-I tried to keep it as simple as possible:
-- All the pages are classes which extend the CDUPage class.
-- The pages have handlers for button input, handlers for messages coming from the autopilot, and a function which draws the display for that page (to an HTML5 canvas).
-- The handlers in the pages can redraw the page, switch to a different page, and return to a previous page if one was set
-- I plan to add a system by which a page can "return" data to the previous "calling" page, allowing general purpose data-input pages to be re-used.
-- The CDU object is intialized, then you initialize and add all the pages.
-- The CDU object uses a node.js net library TCP socket to talk to my autopilot code (the autopilot is the "server").
-- The communications protocol with the autopilot is just JSON objects with at minimum a "type" string field.
+### Grid system
+The MFD screen is layed out in a grid of 7 columns (x value) and rows (y value. Button labels are anchored to their appropriate button and other elements can be positioned anywhere in the x, y ranges 1 - 6.
 
-## OpenCDU and Electron
-OpenCDU is a JavaScript application meant to be run within the electron framework. Electron is basically a chromium window with built-in node.js and v8 capabilities for the JavaScript running within the browser instance. It allows one to reasonably write desktop applications in JavaScript while taking advantage of the UI capabilities of HTML5. 
+### Buttons
+Since the UI is meant to interoperate with the Thrustmaster Cougar MFDs, I used TM's unusual designation for the buttons. It starts at the top left corner and increments in a clockwise direction: 
+Top Row:
+- OSB01
+- OSB02
+- ...
+- OSB05 
+Right Column:
+- OSB06
+- ...
+- OSB10
+Bottom Row (Right to Left)
+- OSB11
+- ...
+- OSB15
+Left Column (Bottom to Top)
+- OSB16
+- ...
+- OSB20
 
-A traditional node.js application would behave as a webserver and serve the html/Javascript to any client browser, and then interact with it either through ajax or something like socket.io. This is how the project started. The server side code would then also use node.js' net library to open a TCP socket to talk to my kerbal space program autopilot code written in C++.
+## Implementation and extension
+I used FabricJS for manipulating the objects on the canvas and lodash for functional programming and other utility functions. 
 
-Then somebody on reddit recommended I use Electron, which meant that my client side code could now suddenly use node.js' net library itself and the whole server side layer could be removed since it's only purpose was to relay information to the autopilot. While recently I've been forced to admit that HTML5/Javascript is probably the fastest and easiest way to build a UI these days, I'm still not big on web programming. Thus something which allows the removal of an entire layer of that was welcome.
