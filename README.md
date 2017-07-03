@@ -5,7 +5,7 @@ OpenMFD is a fully-functional Multi-Function Display which can be used independe
 Install the NodeJS and NPM (Node Package Manager) appropriate for your operating system. 
 Download the source via git or ZIP file. Navigate to that directory and run the commands: 
     npm install
-
+    
 ## Running the application
     npm start
 
@@ -25,14 +25,17 @@ Top Row:
 - OSB02
 - ...
 - OSB05 
+
 Right Column:
 - OSB06
 - ...
 - OSB10
+
 Bottom Row (Right to Left)
 - OSB11
 - ...
 - OSB15
+
 Left Column (Bottom to Top)
 - OSB16
 - ...
