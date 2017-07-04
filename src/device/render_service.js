@@ -10,6 +10,7 @@ module.exports = {
 var textConfig = {
     fontSize: 10,
     fontFamily: 'RobotoMono',
+    textAlign: 'center',
     fill: "limegreen",
     left: 5,
     top: 15

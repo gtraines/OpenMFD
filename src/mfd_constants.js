@@ -11,7 +11,16 @@
     function getButtonTypeConstants() {
         return {
             DISPLAY_ONLY: "DISPLAY_ONLY",
-            NAVIGATION: "NAVIGATION"
+            NAVIGATION: "NAVIGATION",
+            SELECT: "SELECT",
+            SCROLL_NEXT: "SCROLL_NEXT",
+            SCROLL_PREV: "SCROLL_PREV"
+        }
+    }
+
+    function getElementTypeConstants() {
+        return {
+
         }
     }
 

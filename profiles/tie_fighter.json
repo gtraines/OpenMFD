@@ -24,7 +24,7 @@
       ],
       "elements": [
         {
-          "displayText": "TIE Operator Information System",
+          "displayText": "TIE Combat Information System",
           "elementType": "LABEL",
           "position": { "x": 3, "y": 6 }
         }

@@ -5,7 +5,8 @@
 var fs = require('fs');
 
 module.exports = {
-    getJsonFile: getJsonFile
+    getJsonFile: getJsonFile,
+    getDirectoryContents: getDirectoryContents
 };
 
 function getJsonFile(fileLocation) {
@@ -13,4 +14,10 @@ function getJsonFile(fileLocation) {
     var fileJson = JSON.parse(openedFile);
 
     return fileJson;
+}
+
+function getDirectoryContents(directory) {
+    var filesInDirectory = fs.readdirSync(directory);
+
+    return filesInDirectory;
 }

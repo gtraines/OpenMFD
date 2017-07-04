@@ -6,21 +6,32 @@ var fs = require('fs');
 var fileService = require('../data/file_service.js');
 
 module.exports = {
-    getPagesForProfile: getPagesForProfile
-
+    getPagesForProfile: getPagesForProfile,
+    getProfiles: getProfiles
 };
 
 function setUpProfileSelection() {
 
     _.each(profilesObj.profiles, function (profile) {
         profiles.push()
-    })
+    });
 }
 
 function getProfiles() {
-    var profilesFileObj = fileService.getJsonFile("./profiles/profiles.json");
+    var profileFiles = fileService.getDirectoryContents("./profiles/");
+    var profiles = [];
 
-    return profilesFileObj.profiles;
+    _.each(profileFiles, function (profileFile) {
+        var profile = fileService.getJsonFile('./profiles/' + profileFile);
+
+        profiles.push({
+            profileId: profile.profileId,
+            displayText: profile.displayName,
+            filename: profileFile
+        });
+    });
+
+    return profiles;
 }
 
 function getPagesForProfile(fileName) {

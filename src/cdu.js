@@ -11,7 +11,8 @@ class CDU {
     constructor(canvas) {
         // Page references
         this.pages = [];
-        this.defaultPage = null;
+        this.profiles = [];
+        this.selectedProfileIndex = 0;
         this.currentPage = null;
 
         // Canvas to render display
@@ -27,7 +28,18 @@ class CDU {
     }
 
     connect() {
-        this.pages = profilesService.getPagesForProfile("tie_fighter.json");
+        var allProfiles  = profilesService.getProfiles();
+        console.log(this.profiles);
+        this.profiles = _.filter(allProfiles, function (profile) {
+            return profile.profileId != "profile_loader";
+        });
+
+        this.pages = profilesService.getPagesForProfile("profile_loader.json");
+        this.selectedProfileIndex = 0;
+
+        this.pages[0].elements[0].displayText =
+            this.profiles[this.selectedProfileIndex].displayText;
+
         this.setCurrentPage(this.pages[0].id);
     }
 
@@ -65,13 +77,46 @@ class CDU {
             return button.buttonId == btnId;
         });
 
-        if (pageButton.buttonId == undefined) {
+        if (pageButton == null  || pageButton.buttonId == undefined) {
             return;
         }
 
         if (pageButton.buttonType == CONSTS.BTN_TYPES.NAVIGATION) {
             this.setCurrentPage(pageButton.target);
+            return;
         }
+
+        // find implementation from buttonTypeProvider
+        if (pageButton.buttonType == CONSTS.BTN_TYPES.SCROLL_NEXT) {
+            if (this.selectedProfileIndex > 0) {
+                this.selectedProfileIndex--;
+                this.currentPage.elements[0].displayText =
+                    this.profiles[this.selectedProfileIndex].displayText;
+
+                this.setCurrentPage(this.currentPage.id);
+            }
+            return;
+        }
+
+        if (pageButton.buttonType == CONSTS.BTN_TYPES.SCROLL_PREV) {
+            if (this.selectedProfileIndex < this.profiles.length - 1) {
+                this.selectedProfileIndex++;
+
+                this.currentPage.elements[0].displayText =
+                    this.profiles[this.selectedProfileIndex].displayText;
+
+                this.setCurrentPage(this.currentPage.id);
+            }
+            return;
+        }
+
+        if (pageButton.buttonType == CONSTS.BTN_TYPES.SELECT) {
+            this.pages =
+                profilesService.getPagesForProfile(
+                    this.profiles[this.selectedProfileIndex].filename);
+            this.setCurrentPage(this.pages[0].id);
+        }
+
     }
 }
 

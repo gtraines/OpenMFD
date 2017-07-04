@@ -1,0 +1,98 @@
+{
+  "profileId": "freespace_2",
+  "displayName": "FreeSpace 2",
+  "pages": [
+    {
+      "id": "main_menu",
+      "title": {
+        "displayText": "FreeSpace2",
+        "position": { "x": 3, "y": 4 }
+      },
+      "buttons": [
+        {
+          "buttonId": "OSB16",
+          "displayText": "COMMO",
+          "buttonType": "NAVIGATION",
+          "target": "commo"
+        },
+        {
+          "buttonId": "OSB10",
+          "displayText": "TARGET",
+          "buttonType": "NAVIGATION",
+          "target": "target"
+        }
+      ],
+      "elements": []
+    },
+    {
+      "id": "commo",
+      "title": {
+        "displayText": "COMMO",
+        "position": { "x": 3, "y": 4 }
+      },
+      "buttons": [
+        { "buttonId": "GAIN_UP", "displayText": "MAP", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "GAIN_DOWN", "displayText": "MSN", "buttonType": "DISPLAY_ONLY" },
+
+        { "buttonId": "OSB01", "displayText": "IGNR", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB02", "displayText": "ENMY", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB03", "displayText": "RDR\nRNG", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB04", "displayText": "COMM\nMNU", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB05", "displayText": "HUD\nCNTRST", "buttonType": "DISPLAY_ONLY" },
+
+        { "buttonId": "SYM_UP", "displayText": "FRND+", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "SYM_DOWN", "displayText": "-", "buttonType": "DISPLAY_ONLY" },
+
+        { "buttonId": "OSB06", "displayText": "RTB", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB07", "displayText": "FRMTN", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB08", "displayText": "CVR ME", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB09", "displayText": "REARM", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB10", "displayText": "JUMP", "buttonType": "DISPLAY_ONLY" },
+
+        { "buttonId": "CON_UP", "displayText": "REPAIR", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "CON_DOWN", "displayText": "ESCRT", "buttonType": "DISPLAY_ONLY" },
+
+        { "buttonId": "OSB11", "displayText": "ESC\nLST", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB12", "displayText": "CLR\nESC", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB13", "displayText": "SET\nESC", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB14", "displayText": "LST\nXMT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB15", "displayText": "PRTCT", "buttonType": "DISPLAY_ONLY" },
+
+        { "buttonId": "BRT_DOWN", "displayText": "< PREV", "buttonType": "NAVIGATION", "target": "main_menu" },
+
+        { "buttonId": "OSB16", "displayText": "CAPTURE", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB17", "displayText": "ATK SUBSYS", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB18", "displayText": "DISABLE", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB19", "displayText": "DISARM", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB20", "displayText": "ATTACK", "buttonType": "DISPLAY_ONLY" }
+
+      ],
+      "elements": []
+    },
+    {
+      "id": "target",
+      "title": {
+        "displayText": "TARGET",
+        "position": { "x": 3, "y": 4}
+      },
+      "buttons": [
+        { "buttonId": "GAIN_UP", "displayText": "DIST", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB05", "displayText": "THREAT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "SYM_UP", "displayText": "CMPNT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB06", "displayText": "", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB07", "displayText": "HPRDRV", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB10", "displayText": "EJECT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB12", "displayText": "RCL 2", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB13", "displayText": "SET 2", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB14", "displayText": "RCL 1", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB15", "displayText": "SET 1", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB17", "displayText": "REINFRC", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB18", "displayText": "ESCRT ATK", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB19", "displayText": "CTR ATK", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB20", "displayText": "NEWEST", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "CON_UP", "displayText": "PREV >", "buttonType": "NAVIGATION", "target": "main_menu" }
+      ],
+      "elements": []
+    }
+  ]
+}

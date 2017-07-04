@@ -1,0 +1,43 @@
+{
+  "profileId": "profile_loader",
+  "displayName": "Profile Selection",
+  "pages": [
+    {
+      "id": "main_menu",
+      "title": {
+        "displayText": "Select Profile",
+        "position": { "x": 3, "y": 5 }
+      },
+      "buttons": [
+        {
+          "buttonId": "GAIN_UP",
+          "displayText": "< NEXT",
+          "buttonType": "SCROLL_NEXT",
+          "target": "selectedProfile",
+          "dataSource": "profiles"
+        },
+        {
+          "buttonId": "GAIN_DOWN",
+          "displayText": "< PREV",
+          "buttonType": "SCROLL_PREV",
+          "target": "selectedProfile",
+          "dataSource": "profiles"
+        },
+        {
+          "buttonId": "OSB19",
+          "displayText": "SELECT",
+          "buttonType": "SELECT",
+          "target": "selectedProfile"
+        }
+      ],
+      "elements": [
+        {
+          "elementId": "selectedProfile",
+          "displayText": "",
+          "elementType": "LABEL",
+          "position": { "x": 3, "y": 6 }
+        }
+      ]
+    }
+  ]
+}
