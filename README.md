@@ -17,7 +17,7 @@ You can run as many instances of the MFD as you want (I run at least two).
 The sample profile profiles/tie_fighter.json is provided as a starting point. 
 
 ### Grid system
-The MFD screen is layed out in a grid of 7 columns (x value) and rows (y value. Button labels are anchored to their appropriate button and other elements can be positioned anywhere in the x, y ranges 1 - 6.
+The MFD screen is layed out in a grid of 7 columns (x value) and rows (y value). Button labels are anchored to their appropriate button and other elements can be positioned anywhere in the x, y ranges 1 - 6.
 
 ### Buttons
 Since the UI is meant to interoperate with the Thrustmaster Cougar MFDs, I used TM's unusual designation for the buttons. It starts at the top left corner and increments in a clockwise direction: 
