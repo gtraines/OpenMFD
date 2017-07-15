@@ -2,7 +2,7 @@
 OpenMFD is a fully-functional Multi-Function Display which can be used independently or as the screen for human interface devices like the Thrustmaster Cougar MFDs. It is intended for users to easily create new profiles through use of a declarative JSON definition for profiles, pages, and button functionality. It is cross-platform by virtue of relying on NodeJS's Electron framework for desktop applications. It was originally a fork of the OpenCDU project. 
 
 ## Example layouts
-![Freespace 2](/res/freespace2_screenshots.png)
+![Freespace 2](https://github.com/gtraines/OpenMFD/blob/master/res/tiefighter_screenshot.png)
 
 ## Installation
 Install the NodeJS and NPM (Node Package Manager) appropriate for your operating system. 
