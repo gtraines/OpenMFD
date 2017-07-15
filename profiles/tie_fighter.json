@@ -83,7 +83,8 @@
         { "buttonId": "OSB20", "displayText": "NEWEST", "buttonType": "DISPLAY_ONLY" },
         { "buttonId": "CON_UP", "displayText": "PREV >", "buttonType": "NAVIGATION", "target": "main_menu" }
       ],
-      "elements": []
+      "elements": [
+      ]
     }
   ]
 }

@@ -17,9 +17,9 @@
         },
         {
           "buttonId": "OSB10",
-          "displayText": "TARGET",
+          "displayText": "TACTICAL",
           "buttonType": "NAVIGATION",
-          "target": "target"
+          "target": "tactical"
         }
       ],
       "elements": []
@@ -70,29 +70,68 @@
       "elements": []
     },
     {
-      "id": "target",
+      "id": "tactical",
       "title": {
-        "displayText": "TARGET",
+        "displayText": "TACTICAL",
         "position": { "x": 3, "y": 4}
       },
       "buttons": [
-        { "buttonId": "GAIN_UP", "displayText": "DIST", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB05", "displayText": "THREAT", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "SYM_UP", "displayText": "CMPNT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "GAIN_UP", "displayText": "NXT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "GAIN_DOWN", "displayText": "PRV", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB01", "displayText": "NXT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB02", "displayText": "PRV", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB03", "displayText": "NWST\nSHIP", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB04", "displayText": "NXT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB05", "displayText": "PRV", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "SYM_UP", "displayText": "AUTO", "buttonType": "DISPLAY_ONLY" },
         { "buttonId": "OSB06", "displayText": "", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB07", "displayText": "HPRDRV", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB10", "displayText": "EJECT", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB12", "displayText": "RCL 2", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB13", "displayText": "SET 2", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB14", "displayText": "RCL 1", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB15", "displayText": "SET 1", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB17", "displayText": "REINFRC", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB18", "displayText": "ESCRT ATK", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB19", "displayText": "CTR ATK", "buttonType": "DISPLAY_ONLY" },
-        { "buttonId": "OSB20", "displayText": "NEWEST", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB07", "displayText": "SHLD", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB08", "displayText": "ENGINE", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB09", "displayText": "LSR>SHLD", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB10", "displayText": "SHLD>LSR", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB12", "displayText": "PRV", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB13", "displayText": "NXT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB14", "displayText": "", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB15", "displayText": "TURRET", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB16", "displayText": "TGT'S TGT", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB17", "displayText": "MY ATKR", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB18", "displayText": "TGT'S ATKR", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB19", "displayText": "PRV", "buttonType": "DISPLAY_ONLY" },
+        { "buttonId": "OSB20", "displayText": "NXT", "buttonType": "DISPLAY_ONLY" },
         { "buttonId": "CON_UP", "displayText": "PREV >", "buttonType": "NAVIGATION", "target": "main_menu" }
       ],
-      "elements": []
+      "elements": [
+        {
+          "displayText": "HOSTILE",
+          "elementType": "LABEL",
+          "position": { "x": 1, "y": 3 }
+        },
+        {
+          "displayText": "SUBSYS",
+          "elementType": "LABEL",
+          "position": { "x": 1.5, "y": 1.5 }
+        },
+        {
+          "displayText": "UNINSP\nCARGO",
+          "elementType": "LABEL",
+          "position": { "x": 4.5, "y": 1.5 }
+        },
+        {
+          "displayText": "EQUALZ",
+          "elementType": "LABEL",
+          "position": { "x": 5, "y": 3.75 }
+        },
+        {
+          "displayText": "ENERGY\nXFER",
+          "elementType": "LABEL",
+          "position": { "x": 4.5, "y": 5.75 }
+        },
+        {
+          "displayText": "BOMBER",
+          "elementType": "LABEL",
+          "position": { "x": 3.5, "y": 7.75 }
+        }
+      ]
     }
   ]
 }
