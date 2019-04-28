@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FastEventsMapping>
+  <Version>
+    <ProgramVersionNumber>1.0.11.304</ProgramVersionNumber>
+    <ProjectVersionNumber>2.0</ProjectVersionNumber>
+  </Version>
+  <ProjectData>
+    <CharGenRate>20</CharGenRate>
+    <KeyboardLayout>0</KeyboardLayout>
+    <PulseEventTime>32</PulseEventTime>
+    <MouseSensitivity>100</MouseSensitivity>
+    <AdvancedConfiguration>True</AdvancedConfiguration>
+    <SelectedDevices>1004 1005 </SelectedDevices>
+  </ProjectData>
+</FastEventsMapping>
