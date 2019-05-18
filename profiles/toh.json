@@ -1,0 +1,95 @@
+{
+    "profileId": "toh",
+    "displayName": "Take On Helicopters",
+    "pages": [
+      {
+        "id": "main_menu",
+        "title": {
+          "displayText": "Flight Computer",
+          "position": { "x": 3, "y": 5 }
+        },
+        "buttons": [
+          {
+            "buttonId": "OSB16",
+            "displayText": "SYSTEMS (L)",
+            "buttonType": "NAVIGATION",
+            "target": "commo"
+          },
+          {
+            "buttonId": "OSB10",
+            "displayText": "NAV (R)",
+            "buttonType": "NAVIGATION",
+            "target": "target"
+          }
+        ],
+        "elements": [
+          {
+            "displayText": "",
+            "elementType": "LABEL",
+            "position": { "x": 3, "y": 6 }
+          }
+        ]
+      },
+      {
+        "id": "commo",
+        "title": {
+          "displayText": "SYSTEMS",
+          "position": { "x": 3, "y": 4 }
+        },
+        "buttons": [
+          { "buttonId": "GAIN_UP", "displayText": "MAP", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "GAIN_DOWN", "displayText": "MSN", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB01", "displayText": "MSG", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB03", "displayText": "BEAM", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB05", "displayText": "CNFRM", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB06", "displayText": "RPRT STAT", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB07", "displayText": "AWAIT ORDR", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB08", "displayText": "EVSV ACT", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB09", "displayText": "CNTNU MSN", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB10", "displayText": "RTB", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB11", "displayText": "CKPIT", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB12", "displayText": "WHEAD", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB13", "displayText": "REAR", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB14", "displayText": "EXT", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB16", "displayText": "IGNR TGT", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB17", "displayText": "REINFRC", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB18", "displayText": "RESUPPLY", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB19", "displayText": "CVR ME", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB20", "displayText": "ATK", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "CON_UP", "displayText": "PREV >", "buttonType": "NAVIGATION", "target": "main_menu" }
+        ],
+        "elements": []
+      },
+      {
+        "id": "target",
+        "title": {
+          "displayText": "NAV",
+          "position": { "x": 3, "y": 4}
+        },
+        "buttons": [
+          { "buttonId": "GAIN_UP", "displayText": "DIST", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB05", "displayText": "THREAT", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "SYM_UP", "displayText": "CMPNT", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB06", "displayText": "", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB07", "displayText": "HPRDRV", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB10", "displayText": "EJECT", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB12", "displayText": "RCL 2", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB13", "displayText": "SET 2", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB14", "displayText": "RCL 1", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB15", "displayText": "SET 1", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB17", "displayText": "REINFRC", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB18", "displayText": "ESCRT ATK", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB19", "displayText": "CTR ATK", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "OSB20", "displayText": "NEWEST", "buttonType": "DISPLAY_ONLY" },
+          { "buttonId": "CON_UP", "displayText": "PREV >", "buttonType": "NAVIGATION", "target": "main_menu" }
+        ],
+        "elements": [
+            {
+                "displayText": "INSTRUMENTATION",
+                "elementType": "LABEL",
+                "position": { "x": 3, "y": 6 }
+              }
+        ]
+      }
+    ]
+  }
