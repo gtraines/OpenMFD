@@ -7,14 +7,15 @@
 
     <link rel="stylesheet" type="text/css" href="./res/css/cdu.css" />
     <link rel="stylesheet" type="text/css" href="./res/font-awesome/css/font-awesome.css" />
-    <script>
-        window.$ = window.jQuery = require('./node_modules/jquery');
-        window.Spinner = require('./lib/spin.js');
-    </script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./lib/spin.js"></script>
     <script src="./lib/lodash.js"></script>
     <script src="./lib/fabric.js"></script>
-    <script src="./src/cdu_page.js"></script>
-    <script src="./src/cdu.js"></script>
+    <script>
+        window.Spinner = Spinner;
+    </script>
+    <script src="./src/mfd_page.js"></script>
+    <script src="./src/mfd.js"></script>
 </head>
 
 <body bgcolor="#a3a3c2">

@@ -1,10 +1,10 @@
 {
     "name": "multifunction-display",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Generic Multifunction Display",
     "repository": {
         "type": "git",
-        "url": "http://github.com/gtraines/OpenCDU.git"
+        "url": "http://github.com/gtraines/OpenMFD.git"
     },
     "license": "MIT",
     "main": "main.js",
@@ -12,11 +12,13 @@
         "start": "electron main.js"
     },
     "dependencies": {
-        "jquery": "^3.2.1",
+        "jquery": "^3.5.1",
         "fs": "latest",
-        "redux": "^3.7.1"
+        "redux": "^4.1.2",
+        "electron": "17.1.2",
+        "require": "latest"
     },
     "devDependencies": {
-        "electron-prebuilt": "^0.37.0"
+        "electron": "^17.1.2"
     }
 }

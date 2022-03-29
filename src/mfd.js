@@ -1,4 +1,4 @@
-// Generic CDU Program for whatever you like
+// MFD wrapper
 
 var net = require('net');
 var CONSTS = require('./src/mfd_constants.js');
@@ -6,8 +6,8 @@ var spinnerService = require('./src/device/spin_service.js');
 var renderService = require('./src/device/render_service.js');
 var profilesService = require('./src/domain/profiles_service.js');
 
-// CDU Class
-class CDU {
+// MFD Class
+class MFD {
     constructor(canvas) {
         // Page references
         this.pages = [];
@@ -59,7 +59,7 @@ class CDU {
         this.canvas.clear();
     }
 
-    // Set the current CDU page by name
+    // Set the current MFD page by name
     setCurrentPage(id) {
         this.currentPage = _.find(this.pages, function (page) {
             return page.id == id;
@@ -121,20 +121,20 @@ class CDU {
 }
 
 var canvas = {};
-var cdu = {};
+var mfd = {};
 
-function renderCdu() {
+function renderMfd() {
 
     canvas = new fabric.StaticCanvas("MainDisplay");
     canvas.setDimensions({ width: "100%", height: "100%" }, { cssOnly: true });
 
-    cdu = new CDU(canvas);
-    wireButtonDivs(cdu);
+    mfd = new MFD(canvas);
+    wireButtonDivs(mfd);
 }
 
-function wireButtonDivs(cduObj) {
+function wireButtonDivs(mfdObj) {
     $("button").click(function() {
-        cduObj.handleInput(this.id);
+        mfdObj.handleInput(this.id);
     });
 
     var divElems = [
@@ -151,16 +151,16 @@ function wireButtonDivs(cduObj) {
     _.each(divElems, function (elem) {
         $("#"+elem).click(function() {
 
-            cduObj.handleInput(this.id);
+            mfdObj.handleInput(this.id);
         });
     });
 }
 
 $(document).ready(function() {
 
-    console.log("Loading CDU");
+    console.log("Loading MFD");
 
-    spinnerService.runLoadingCountdown(renderCdu);
+    spinnerService.runLoadingCountdown(renderMfd);
 
 });
 

@@ -3,6 +3,7 @@
  */
 
 var http = require('http');
+requireServer = require('../require/server') // this would be require('require/server') in most applications
 
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'})

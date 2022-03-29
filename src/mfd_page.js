@@ -1,9 +1,9 @@
-// Cdu Page Classes
+// MFD Page Classes
 
 // Abstract class to derive other page classes from
-class CDUPage {
-    constructor(name,CDUobj) {
-        this.cdu = CDUobj;
+class MFDPage {
+    constructor(name, MFDObj) {
+        this.mfd = MFDObj;
         this.returnPage = null;
         this.name = name;
     }
@@ -30,10 +30,10 @@ class CDUPage {
                 return_page = this.returnPage;
                 this.returnPage = null;
             } else
-                return_page = this.cdu.getDefaultPage().getName();
+                return_page = this.mfd.getDefaultPage().getName();
 
             console.log("Moving to page " + return_page);
-            this.cdu.setCurrentPage(return_page);
+            this.mfd.setCurrentPage(return_page);
             return true;
         }
         
@@ -63,13 +63,13 @@ class CDUPage {
 }
 
 // Page for the main menu
-class MainMenuPage extends CDUPage {
+class MainMenuPage extends MFDPage {
     handleInput(btnId) {
         switch(btnId) {
         case "D1":
             console.log("Moving to status page");
-            this.cdu.getPage("status").setReturnPage(this.name);
-            this.cdu.setCurrentPage("status");
+            this.mfd.getPage("status").setReturnPage(this.name);
+            this.mfd.setCurrentPage("status");
             break;
         }
     }
@@ -101,9 +101,9 @@ class MainMenuPage extends CDUPage {
     }
 }
 
-class StatusPage extends CDUPage {
-    constructor(name,CDUobj) {
-        super(name,CDUobj);
+class StatusPage extends MFDPage {
+    constructor(name, MFDObj) {
+        super(name, MFDObj);
 
         this.univ_time = 0.0;
         this.delta_t = 0.0;
@@ -137,10 +137,10 @@ class StatusPage extends CDUPage {
             this.ssa = msg["SSA"];
         }
         
-        if (this.cdu.getCurrentPage() != this)
+        if (this.mfd.getCurrentPage() != this)
             return;
         
-        this.cdu.clearScreen();
+        this.mfd.clearScreen();
         this.drawPage();        
     }
     
@@ -148,7 +148,7 @@ class StatusPage extends CDUPage {
         // Get super class to draw return button
         super.drawPage();
 
-        var c = this.cdu.getDisplay();
+        var c = this.mfd.getDisplay();
         var ctx = c.getContext("2d");
 
         ctx.fillStyle = "limegreen";
@@ -190,7 +190,7 @@ class StatusPage extends CDUPage {
         if(super.handleInput(btnId))
             return;
 
-        var c = this.cdu.getDisplay();
+        var c = this.mfd.getDisplay();
         var ctx = c.getContext("2d");
         
     }
