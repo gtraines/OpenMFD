@@ -1,5 +1,5 @@
 #This file can be manually edited using any ASCII editor.
-#File created on 3/28/2022 12:00:00 AM 3/28/2022 8:20:22 PM#
+#File created on 4/17/2022 12:00:00 AM 4/17/2022 10:15:24 AM#
 #
 #IMPORTANT INFO REGARDING the keyboard key AltGr (RAlt as named in DCS) or RMENU as named DCSFP
 #When you press AltGr DCSFP will register RMENU + LCONTROL. This is a bug which "just is". You need to modify that in the profile
@@ -24,7 +24,7 @@ PanelType=PZ55SwitchPanel
 PanelInstanceID=\\?\hid#vid_06a3&pid_0d67#7&3897c487&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
 BindingHash=d2ba2ff1a3b627e3ef5f98c863f53c2f
 BeginPanel
-	SwitchPanelKey{1KNOB_ENGINE_START}\o/OSKeyPress{ThirtyTwoMilliSec,HOME}
+	SwitchPanelKey{1KNOB_ENGINE_START}\o/OSKeyPress{Indefinite,HOME}
 	SwitchPanelKey{1SWITCHKEY_LIGHTS_LANDING}\o/OSKeyPress{FiftyMilliSec,RCONTROL + OEM_COMMA}
 	SwitchPanelKey{0SWITCHKEY_LIGHTS_LANDING}\o/OSKeyPress{ThirtyTwoMilliSec,RCONTROL + OEM_COMMA}
 	SwitchPanelKey{1SWITCHKEY_LIGHTS_BEACON}\o/OSKeyPress{ThirtyTwoMilliSec,RCONTROL + OEM_1}
@@ -65,12 +65,16 @@ BeginPanel
 	MultiPanelKnob{ALT}\o/{0AUTO_THROTTLE}\o/OSKeyPress{ThirtyTwoMilliSec,VK_G}
 	MultiPanelKnob{ALT}\o/{1LCD_WHEEL_DEC}\o/OSKeyPress{ThirtyTwoMilliSec,LCONTROL + OEM_PERIOD}
 	MultiPanelKnob{ALT}\o/{1LCD_WHEEL_INC}\o/OSKeyPress{ThirtyTwoMilliSec,LCONTROL + OEM_COMMA}
+	MultiPanelKnob{VS}\o/{1AP_BUTTON}\o/OSKeyPress{ThirtyTwoMilliSec,LMENU + VK_B}
+	MultiPanelKnob{VS}\o/{0AP_BUTTON}\o/OSKeyPress{ThirtyTwoMilliSec,LMENU + VK_B}
+	MultiPanelKnob{VS}\o/{1NAV_BUTTON}\o/OSKeyPress{ThirtyTwoMilliSec,LMENU + LSHIFT + VK_B}
+	MultiPanelKnob{VS}\o/{0NAV_BUTTON}\o/OSKeyPress{ThirtyTwoMilliSec,LMENU + LSHIFT + VK_B}
 	MultiPanelDCSBIOSControlLCD{ALT}\o/{UpperLCD}\o/DCSBiosOutput{ALT_MSL_FT|Equals|0}
-	MultiPanelDCSBIOSControlLCD{ALT}\o/{LowerLCD}\o/DCSBiosOutputFormula{(65535/2 - VVI_P)}
+	MultiPanelDCSBIOSControlLCD{ALT}\o/{LowerLCD}\o/DCSBiosOutputFormula{(VVI_P -(65535/2))/127}
 	MultiPanelDCSBIOSControlLCD{HDG}\o/{UpperLCD}\o/DCSBiosOutput{HDG_DEG|Equals|0}
 	MultiPanelDCSBIOSControlLCD{IAS}\o/{UpperLCD}\o/DCSBiosOutput{IAS_US_INT|Equals|0}
 	MultiPanelDCSBIOSControlLCD{VS}\o/{UpperLCD}\o/DCSBiosOutput{ALT_MSL_FT|Equals|0}
-	MultiPanelDCSBIOSControlLCD{VS}\o/{LowerLCD}\o/DCSBiosOutputFormula{65535/2 - VVI_P}
+	MultiPanelDCSBIOSControlLCD{VS}\o/{LowerLCD}\o/DCSBiosOutputFormula{(VVI_P -(65535/2))/127}
 EndPanel
 
 
