@@ -23,7 +23,7 @@ app.on('ready', function() {
     // Create the browser window.
     mainWindow = new BrowserWindow(
         {
-            webPreferences: { nodeIntegration: true },
+            webPreferences: { nodeIntegration: true, contextIsolation: false },
             width: 600, 
             height: 600
         });
